@@ -140,3 +140,6 @@ Kaggle Spotify Datasets:
 
 #### Acknowledgments :
 
+<> The project structure and code implementation were guided by various online resources and tutorials.
+
+<> Feel free to explore the project, modify it according to your needs, and experiment with different approaches to improve the data analysis and data visualization.
