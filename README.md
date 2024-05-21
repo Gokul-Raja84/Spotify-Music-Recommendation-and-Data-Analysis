@@ -1,41 +1,4 @@
-<h1 align="center"> <a href="https://open.spotify.com" target="_blank"> <img src="https://github.com/mrankitgupta/Spotify-Data-Analysis-using-Python/blob/main/images/social-spotify.svg" alt="Spotify" width="55" height="40"/> </a> Spotify Data Analysis using Python <a> </h1>
-
-
-### SPOTIFY 
-
-![Spotify Genres](https://github.com/Gokul-Raja84/Spotify-Data-Analysis/assets/106546785/d2210e49-8287-4b8e-b7a3-6406be196364)
-
-
-Spotify: Revolutionizing the Music Streaming Landscape
-
-Introduction:
-Spotify is a pioneering force in the realm of audio streaming and media services, revolutionizing the way people access, discover, and enjoy music and podcasts. Founded in April 2006 by Daniel Ek and Martin Lorentzon in Stockholm, Sweden, the company has rapidly evolved into a global phenomenon, reshaping the music industry and becoming an integral part of modern digital culture.
-
-Mission and Vision:
-At its core, Spotify is driven by a clear mission: "To unlock the potential of human creativity—by giving a million creative artists the opportunity to live off their art and billions of fans the opportunity to enjoy and be inspired by it." This mission underscores the company's commitment to empowering both creators and listeners, fostering a mutually beneficial ecosystem.
-
-Key Achievements and Innovations:
-1. Music Discovery: Spotify introduced a groundbreaking approach to music discovery through its personalized playlists and algorithms. The "Discover Weekly" feature, which curates a unique playlist for each user based on their listening habits, exemplifies Spotify's dedication to enhancing user experience.
-
-2. Extensive Library: Spotify boasts an expansive library of over 70 million tracks, catering to a diverse range of musical preferences and genres. Users can access an extensive collection of songs, albums, podcasts, and playlists, offering an unparalleled array of content.
-
-3. Freemium Model: Spotify pioneered the freemium model, allowing users to access a basic version of the platform with ads or opt for a premium subscription that provides an ad-free experience, offline listening, and other exclusive features.
-
-4. Podcast Revolution: Recognizing the popularity of podcasts, Spotify has made significant strides in podcasting. The company acquired major podcast networks, such as Gimlet Media and Anchor, and secured exclusive podcast content, establishing itself as a formidable player in the podcasting arena.
-
-5. Artist Empowerment: Spotify introduced tools like "Spotify for Artists," enabling musicians to directly engage with their audience, access real-time data, and promote their music.
-
-6. Global Reach: Spotify's presence spans across more than 180 countries, making it a truly global platform that transcends geographical boundaries.
-
-Impact and Industry Transformation:
-Spotify has reshaped the music industry by democratizing access to music and providing an alternative to traditional music consumption methods. Its user-centric model and data-driven approach have ignited discussions about artist compensation and reshaped the revenue distribution model within the industry.
-
-Challenges and Growth:
-Despite its monumental success, Spotify faces challenges such as maintaining profitability, competition from rival streaming services, and addressing concerns about artist compensation.
-
-Conclusion:
-Spotify's journey from a startup in Sweden to a global music streaming powerhouse underscores its indelible impact on the music industry and modern culture. By embracing innovation, personalization, and artist empowerment, Spotify has become synonymous with the evolution of music consumption in the digital age.
-
+<h1 align="center"> <a href="https://open.spotify.com" target="_blank"> <img src="https://github.com/mrankitgupta/Spotify-Data-Analysis-using-Python/blob/main/images/social-spotify.svg" alt="Spotify" width="55" height="40"/> </a> Spotify -  Music Recommendation System and Data Analysis  <a> </h1>
 
 
 ### About the Project
@@ -45,6 +8,92 @@ Spotify is a Swedish audio streaming and media services provider founded in Apri
 
 ![Spotify logo](https://github.com/Gokul-Raja84/Spotify-Data-Analysis/assets/106546785/26b5935a-85dc-4428-9038-39d6de77a5c0)
 
+
+---
+
+# Spotify Music Recommendation System
+
+This project presents a Music Recommendation System built using the Spotify dataset. The system leverages advanced data analysis and machine learning techniques to recommend songs based on user preferences.
+
+
+## Introduction
+
+The Spotify Music Recommendation System aims to recommend songs that align with a user's listening history. By analyzing patterns in song popularity, audio attributes, and genres, the system can suggest songs that are similar to those the user already enjoys. This project highlights the power of data analysis and machine learning in creating personalized user experiences.
+
+## Features
+
+- **Data Extraction**: Uses Spotipy to fetch song data from the Spotify Web API.
+- **Exploratory Data Analysis (EDA)**: Identifies key features and patterns in the Spotify dataset.
+- **Feature Engineering**: Selects relevant features to build an accurate recommendation model.
+- **Recommendation System**: Recommends songs based on user-input songs using cosine similarity.
+
+## Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/spotify-music-recommendation.git
+   cd spotify-music-recommendation
+   ```
+
+2. **Install the required libraries**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Set up Spotify API credentials**:
+   - Create an app on the [Spotify Developer's page](https://developer.spotify.com/).
+   - Save your Client ID and Secret Key.
+   - Set the environment variables:
+     ```bash
+     export SPOTIFY_CLIENT_ID='your_client_id'
+     export SPOTIFY_CLIENT_SECRET='your_client_secret'
+     ```
+
+## Usage
+
+1. **Import necessary libraries**:
+   ```python
+   import spotipy
+   from spotipy.oauth2 import SpotifyClientCredentials
+   import pandas as pd
+   import numpy as np
+   from collections import defaultdict
+   from sklearn.metrics import euclidean_distances
+   from scipy.spatial.distance import cdist
+   import difflib
+   import os
+   ```
+
+2. **Authenticate and initialize Spotipy**:
+   ```python
+   sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=os.environ["SPOTIFY_CLIENT_ID"],
+                                                              client_secret=os.environ["SPOTIFY_CLIENT_SECRET"]))
+   ```
+
+3. **Define functions to fetch song data and calculate recommendations** (full code provided in the repository).
+
+4. **Get song recommendations**:
+   ```python
+   recommended_songs = recommend_songs([
+       {'name': 'Come As You Are', 'year': 1991},
+       {'name': 'Smells Like Teen Spirit', 'year': 1991},
+       {'name': 'Lithium', 'year': 1992},
+       {'name': 'All Apologies', 'year': 1993},
+
+
+---
+
+## Objective
+
+- **Leverage Spotify's Rich Dataset for Personalized Music Recommendations**: The primary objective of this project is to utilize the extensive dataset provided by Spotify to develop a sophisticated Music Recommendation System. By conducting an in-depth Exploratory Data Analysis (EDA), we aim to uncover patterns and relationships within the data that can be used to recommend songs tailored to individual user preferences. This involves identifying key audio features and metadata that influence music popularity and listener engagement.
+
+## Music Recommendation System Explanation
+
+- **Building a Data-Driven Music Recommendation Engine**: The Music Recommendation System is designed to suggest songs based on user input, leveraging advanced data analysis and machine learning techniques. By utilizing Spotipy, a Python client for the Spotify Web API, the system fetches detailed song data, including audio features and metadata. The system calculates the cosine similarity between the mean vector of user-input songs and other songs in the dataset, effectively identifying and recommending songs with similar audio characteristics and metadata. This approach ensures that the recommendations are highly relevant and personalized, reflecting the user's music taste and preferences.
+
+---
+
+## Exploratory data analysis (EDA) and Data Visualization
 
 The project entails an engaging and insightful exploratory data analysis (EDA) and data visualization initiative, centered around the rich and extensive dataset sourced from Spotify. Powered by the versatile programming language Python and harnessed by statistical methodologies, this endeavor delves into uncovering the hidden gems within the realm of music streaming.
 
